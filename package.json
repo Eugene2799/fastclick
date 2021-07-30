@@ -20,12 +20,7 @@
     "click",
     "delay"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "MIT",
   "implements": [
     "CommonJS/Modules/1.0"
   ],
