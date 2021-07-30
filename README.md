@@ -1,10 +1,10 @@
-# FastClick #
+# FastClickForApp #
 
-FastClick is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a `click` event on mobile browsers. The aim is to make your application feel less laggy and more responsive while avoiding any interference with your current logic.
+FastClickForApp is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a `click` event on mobile browsers. The aim is to make your application feel less laggy and more responsive while avoiding any interference with your current logic.
 
-FastClick is developed by [FT Labs](http://labs.ft.com/), part of the Financial Times.
+FastClickForApp is developed by [FT Labs](http://labs.ft.com/), part of the Financial Times.
 
-*Note: As of late 2015 most mobile browsers - notably Chrome and Safari - no longer have a 300ms touch delay, so fastclick offers no benefit on newer browsers, and risks introducing [bugs](https://github.com/ftlabs/fastclick/issues) into your application. Consider carefully whether you really need to use it.*
+*Note: As of late 2015 most mobile browsers - notably Chrome and Safari - no longer have a 300ms touch delay, so fastclick offers no benefit on newer browsers, and risks introducing [bugs](https://github.com/Eugene2799/fastclick/issues) into your application. Consider carefully whether you really need to use it.*
 
 [Explication en français](http://maxime.sh/2013/02/supprimer-le-lag-des-clics-sur-mobile-avec-fastclick/).
 
@@ -29,7 +29,7 @@ The library has been deployed as part of the [FT Web App](http://app.ft.com/) an
 
 ## When it isn't needed ##
 
-FastClick doesn't attach any listeners on desktop browsers.
+FastClickForApp doesn't attach any listeners on desktop browsers.
 
 Chrome 32+ on Android with `width=device-width` in the [viewport meta tag](https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag) doesn't have a 300ms delay, therefore listeners aren't attached.
 
@@ -89,7 +89,7 @@ attachFastClick(document.body);
 
 ### AMD ###
 
-FastClick has AMD (Asynchronous Module Definition) support. This allows it to be lazy-loaded with an AMD loader, such as [RequireJS](http://requirejs.org/). Note that when using the AMD style require, the full `FastClick` object will be returned, _not_ `FastClick.attach`
+FastClickForApp has AMD (Asynchronous Module Definition) support. This allows it to be lazy-loaded with an AMD loader, such as [RequireJS](http://requirejs.org/). Note that when using the AMD style require, the full `FastClick` object will be returned, _not_ `FastClick.attach`
 
 ```js
 var FastClick = require('fastclick');
@@ -113,7 +113,7 @@ Sometimes you need FastClick to ignore certain elements. You can do this easily 
 
 #### Use case 1: non-synthetic click required ####
 
-Internally, FastClick uses `document.createEvent` to fire a synthetic `click` event as soon as `touchend` is fired by the browser. It then suppresses the additional `click` event created by the browser after that. In some cases, the non-synthetic `click` event created by the browser is required, as described in the [triggering focus example](http://ftlabs.github.com/fastclick/examples/focus.html).
+Internally, FastClickForApp uses `document.createEvent` to fire a synthetic `click` event as soon as `touchend` is fired by the browser. It then suppresses the additional `click` event created by the browser after that. In some cases, the non-synthetic `click` event created by the browser is required, as described in the [triggering focus example](http://Eugene2799.github.com/fastclick/examples/focus.html).
 
 This is where the `needsclick` class comes in. Add the class to any element that requires a non-synthetic click.
 
@@ -127,11 +127,11 @@ Another example of when to use the `needsclick` class is with dropdowns in Twitt
 
 ## Examples ##
 
-FastClick is designed to cope with many different browser oddities. Here are some examples to illustrate this:
+FastClickForApp is designed to cope with many different browser oddities. Here are some examples to illustrate this:
 
-* [basic use](http://ftlabs.github.com/fastclick/examples/layer.html) showing the increase in perceived responsiveness
-* [triggering focus](http://ftlabs.github.com/fastclick/examples/focus.html) on an input element from a `click` handler
-* [input element](http://ftlabs.github.com/fastclick/examples/input.html) which never receives clicks but gets fast focus
+* [basic use](http://Eugene2799.github.com/fastclick/examples/layer.html) showing the increase in perceived responsiveness
+* [triggering focus](http://Eugene2799.github.com/fastclick/examples/focus.html) on an input element from a `click` handler
+* [input element](http://Eugene2799.github.com/fastclick/examples/input.html) which never receives clicks but gets fast focus
 
 ## Tests ##
 
@@ -139,4 +139,4 @@ There are no automated tests. The files in `tests/` are manual reduced test case
 
 ## Credits and collaboration ##
 
-FastClick is maintained by [Rowan Beentje](http://twitter.com/rowanbeentje), [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia) and [Matthew Andrews](http://twitter.com/andrewsmatt) at [FT Labs](http://labs.ft.com). All open source code released by FT Labs is licenced under the MIT licence. We welcome comments, feedback and suggestions.  Please feel free to raise an issue or pull request.
+FastClickForApp is maintained by [Rowan Beentje](http://twitter.com/rowanbeentje), [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia) and [Matthew Andrews](http://twitter.com/andrewsmatt) at [FT Labs](http://labs.ft.com). All open source code released by FT Labs is licenced under the MIT licence. We welcome comments, feedback and suggestions.  Please feel free to raise an issue or pull request.
